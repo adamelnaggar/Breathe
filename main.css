@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 @keyframes blink{
     0% { opacity:1; }
@@ -29,7 +29,7 @@ body {
 }
 nav li {
 	display: inline;
-	font-weight: 200;
+	font-weight: 300;
 	font-size: 25px;
 }
 nav li:nth-last-child(n+2):after {
@@ -103,7 +103,7 @@ nav span:hover {
 	display: none;
 }
 #cursor {
-	font-weight: 200;
+	font-weight: 300;
 	opacity: 1;
 	animation: blink 1.2s infinite;
 }
@@ -188,11 +188,9 @@ footer a:hover {
 .social a {
 	color: inherit;
 	text-decoration: none;
-}
-.social i {
 	margin-right: 5px;
 }
-.social i:last-child {
+.social a:last-child {
 	margin-right: 0;
 }
 #tweet {
@@ -238,16 +236,20 @@ footer a:hover {
 		width: 90vw;
 		margin-bottom: 50px;
 	}
+	.about {
+		min-height: 100vh;
+	}
 }
 @media (max-width: 800px) {
 	.about {
 		width: auto;
-		min-height: 100vh;
 	}
 }
 @media (max-width: 1024px) {
 	#increase, #decrease {
 		font-size: 30px;
+		position: relative;
+		right: 2px;
 	}
 	.close {
 		font-size: 25px;
@@ -278,6 +280,12 @@ footer a:hover {
 		display: block;
 		opacity: 0;
 		transition: opacity 1s;
+	}
+	nav span:hover {
+		text-decoration: none;
+	}
+	.about a:hover {
+		text-decoration: none;
 	}
 }
 @media (max-width: 510px) {

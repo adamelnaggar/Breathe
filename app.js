@@ -37,7 +37,7 @@ function accessQuote() {
 	$('.quote').prepend(quotesArr[newNum]);
 	$('.quote').fadeIn(1000);
   if (screenSize < 1025) {
-    $("#tweet").replaceWith('<a target="_blank" href="http://twitter.com/intent/tweet?text='+quotesArr[newNum]+' via http://breathe.github.io"><i class="fa fa-twitter" id="tweet" aria-hidden="true"></i></a>');
+    $("#tweet").replaceWith('<a target="_blank" href="http://twitter.com/intent/tweet?text='+quotesArr[newNum]+' via adamelnaggar.github.io/breathe"><i class="fa fa-twitter" id="tweet" aria-hidden="true"></i></a>');
     $("#tweet").css("opacity", "1");
   }
 }
@@ -52,12 +52,13 @@ function fadeInQuote() {
 }
 if (screenSize > 1024) {
   $('.quote').hover(function(){
-    $("#tweet").replaceWith('<a target="_blank" href="http://twitter.com/intent/tweet?text='+quotesArr[newNum]+' via http://breathe.github.io"><i class="fa fa-twitter" id="tweet" aria-hidden="true"></i></a>');
+    $("#tweet").replaceWith('<a target="_blank" href="http://twitter.com/intent/tweet?text='+quotesArr[newNum]+' via adamelnaggar.github.io/breathe"><i class="fa fa-twitter" id="tweet" aria-hidden="true"></i></a>');
     $("#tweet").fadeIn(500);
   },function(){
     $("#tweet").fadeOut(500);
   });
 }
+
 var minutes = $(".minutenumber").html();
 var beginSound = new Audio('start.wav');
 var completeSound = new Audio('complete.wav');
