@@ -37,7 +37,7 @@ function accessQuote() {
 	$('.quote').prepend(quotesArr[newNum]);
 	$('.quote').fadeIn(1000);
   if (screenSize < 1025) {
-    $("#tweet").replaceWith('<a target="_blank" href="http://twitter.com/intent/tweet?text='+quotesArr[newNum]+' via adamelnaggar.github.io/breathe"><i class="fa fa-twitter" id="tweet" aria-hidden="true"></i></a>');
+    $("#tweet").replaceWith('<a target="_blank" href="http://twitter.com/intent/tweet?text='+quotesArr[newNum]+' via automatecutback.co.uk/breathe"><i class="fa fa-twitter" id="tweet" aria-hidden="true"></i></a>');
     $("#tweet").css("opacity", "1");
   }
 }
@@ -52,7 +52,7 @@ function fadeInQuote() {
 }
 if (screenSize > 1024) {
   $('.quote').hover(function(){
-    $("#tweet").replaceWith('<a target="_blank" href="http://twitter.com/intent/tweet?text='+quotesArr[newNum]+' via adamelnaggar.github.io/breathe"><i class="fa fa-twitter" id="tweet" aria-hidden="true"></i></a>');
+    $("#tweet").replaceWith('<a target="_blank" href="http://twitter.com/intent/tweet?text='+quotesArr[newNum]+' via automatecutback.co.uk/breathe"><i class="fa fa-twitter" id="tweet" aria-hidden="true"></i></a>');
     $("#tweet").fadeIn(500);
   },function(){
     $("#tweet").fadeOut(500);
@@ -60,9 +60,11 @@ if (screenSize > 1024) {
 }
 
 var minutes = $(".minutenumber").html();
-var beginSound = new Audio('start.wav');
-var completeSound = new Audio('complete.wav');
+// var beginSound = new Audio('start.wav');
+// var completeSound = new Audio('complete.wav');
 var running = false;
+var audio1 = document.getElementById('startsound');
+var audio2 = document.getElementById('completesound');
 
 function increaseMinutes() {
   minutes++;
@@ -93,7 +95,7 @@ function getReady() {
   }, 1000);
   setTimeout(function(){
     clearInterval(a);
-    beginSound.play();
+    audio1.play();
     actualTimer(minutes);
   }, 10000);
 }
@@ -128,7 +130,7 @@ function actualTimer(mins){
   setTimeout(function(){
     clearInterval(b);
     $('.countdown').html("Thank you. Come back anytime.");
-    completeSound.play();
+    audio2.play();
     running = false;
   }, totalSeconds*1000);
 }
