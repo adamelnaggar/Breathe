@@ -99,6 +99,9 @@ nav span:hover {
 	bottom: 2.5px;
 	width: 20px;
 }
+#increase:hover, #decrease:hover {
+	cursor: pointer;
+}
 .countdown {
 	display: none;
 }
@@ -204,31 +207,6 @@ footer a:hover {
 .quote a {
 	color: inherit;
 	text-decoration: none;
-}
-.audiotouch {
-	position: absolute;
-    bottom: 20px;
-    right: 4vw;
-    border: white solid 2px;
-    border-radius: 3px;
-    padding: 8px 8px 13px 8px;
-    display: none;
-}
-.audiooption {
-	background: white;
-    color: #FFB0A5;
-    border-radius: 3px;
-    font-weight: 600;
-    padding: 5px 10px 5px 10px;
-    transition: color ease 4s;
-}
-.options {
-	margin-top: 10px;
-}
-.audiooption:first-child {
-	color: #1ED68A;
-	margin-right: 20px;
-	margin-left: 45px;
 }
 @media (max-width: 470px) {
 	.header {

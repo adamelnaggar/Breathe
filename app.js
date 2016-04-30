@@ -2,10 +2,6 @@ $(document).ready(function() {
     typeInOut();
 });
 
-if (Modernizr.touch) { 
-    $(".audiotouch").fadeIn(1000);
-}
-
 var colors = ['#FFB74D', '#4DD0E1'];
 var active = 0;
 var screenSize = document.documentElement.clientWidth;
@@ -180,14 +176,4 @@ $("#begintimer").on('click', function() {
   $(".innersection").fadeOut(1000);
   running = true;
   setTimeout(getReady, 1001);
-});
-
-$("#audioyes").on('click', function(){
-  audio1.play();
-});
-$("#audiono").on('click', function(){
-  $(".audiooptions").html("You will not be alerted when the timer starts and ends. Please refresh your browser if you want to change your mind.");
-  setTimeout(function(){
-    $(".audiooptions").fadeOut(1000);
-  }, 1000);
 });
