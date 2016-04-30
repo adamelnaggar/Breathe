@@ -180,12 +180,6 @@ $("#begintimer").on('click', function() {
   $(".innersection").fadeOut(1000);
   running = true;
   setTimeout(getReady, 1001);
-  setTimeout(function() {
-    audio1.play();
-  }, 10000);
-  setTimeout(function() {
-    audio2.play();
-  }, minutes*60*1000);
 });
 
 $("#audioyes").on('click', function(){
