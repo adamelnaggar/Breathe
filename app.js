@@ -132,6 +132,7 @@ function actualTimer(mins){
     $('.countdown').html("Thank you. Come back anytime.");
     audio2.play();
     running = false;
+    sleep.allow();
   }, totalSeconds*1000);
 }
 
@@ -175,5 +176,6 @@ $("#decrease").on('click', decreaseMinutes);
 $("#begintimer").on('click', function() {
   $(".innersection").fadeOut(1000);
   running = true;
+  sleep.prevent();
   setTimeout(getReady, 1001);
 });
