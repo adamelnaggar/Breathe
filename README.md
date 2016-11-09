@@ -6,7 +6,7 @@ Breathe is a simple meditation timer I created. I wanted to make a simple timer 
 
 Breathe is coded with Javascript and a little jQuery. 
 
-#See it in action [here!](http://automatecutback.co.uk/breathe)
+#See it in action [here!](http://adamelnaggar.github.io/breathe)
 
 I've made use of a some other people's code:
 * [Typed.js](https://github.com/mattboldt/typed.js/)
